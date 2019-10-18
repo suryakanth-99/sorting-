@@ -2,16 +2,16 @@
 void insertionsort(int a[],int n)
 {
     int i,j,key;
-    for(i=1;i<n;i++)
+    for(i=1;i<n;i++) //will strat from 2nd element
     {
         j=i-1;
         key=a[i];
-        while(j>=0 && a[j]>key)
+        while(j>=0 && a[j]>key) //any element smaller than key element before the key element are shifted towards right 
         {
-            a[j+1]=a[j];
-            j=j-1;
+            a[j+1]=a[j];   //from their position
+            j=j-1;   //and then j is decremented to compare with next left element
         }
-        a[j+1]=key;
+        a[j+1]=key; //after shifting j is decremented ,inorder to place in correct location store in j+1 location
     }
 }
 
