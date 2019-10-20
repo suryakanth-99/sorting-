@@ -7,3 +7,7 @@ In this sorting technique the adjacent elements are compared.
 This is called one pass.
 Now repeat this process for 2nd pass upto penultimate(last but one) element as the last one is sorted according to its order.
 **For n elements we have n-1 passes because in each pass we will get the last elements according to order.In n-1 th pass we need to compare only first two elements and sort them.no need for nth pass
+
+
+#selection sort :
+In this sorting technique we iterate the outer loop for n-1 times,for each iteration the "min" value is taken as index position,inner loop starts from next element of outer loop element till the last element.If we found any value that is than the value at index position-'min',then we will assign that index as min,at the end of the loop we will swap the ith index and min index,this process is continued for n-1 times
