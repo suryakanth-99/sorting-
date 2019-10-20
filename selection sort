@@ -8,17 +8,17 @@ int main()
     scanf("%d",&a[i]);
     for(i=0;i<n-1;i++)
     {
-        min=i;
-        for(j=i+1;j<n;j++)
+        min=i; //assign ith index as min index assuming it is the index which holds min value
+        for(j=i+1;j<n;j++) //now start comparing values from next element of ith index till last
         {
-            if(a[j]<a[min])
-            min=j;
+            if(a[j]<a[min])  //if we encounter any value that is less than value at min index position,then assign j value to that min value 
+            min=j;         //this inner for loop is executed till last element so that the min values are  obtained in the array 
         }
         temp=a[i];
-        a[i]=a[min];
+        a[i]=a[min];     //after getting the minimum values swap those values with i,min indexes
         a[min]=temp;
     }
     for(i=0;i<n;i++)
-    printf("%d ",a[i]);
+    printf("%d ",a[i]);//displays the sorted elements
     return 0;
 }
